@@ -1,5 +1,7 @@
 package com.spring.javawebS.service;
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,6 +34,16 @@ public class MemberServiceImpl implements MemberService {
 	@Override
 	public void setMemberVisitProcess(MemberVO vo) {
 		memberDAO.setMemberVisitProcess(vo);
+	}
+
+	@Override
+	public ArrayList<MemberVO> getMemberList(int startIndexNo, int pageSize, String mid) {
+		return memberDAO.getMemberList(startIndexNo, pageSize, mid);
+	}
+
+	@Override
+	public void setMemberPwdUpdate(String mid, String pwd) {
+		memberDAO.setMemberPwdUpdate(mid, pwd);
 	}
 	
 }
