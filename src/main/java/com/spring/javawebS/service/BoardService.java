@@ -21,4 +21,14 @@ public interface BoardService {
 
 	public void boardGoodFlagCheck(int idx, int gFlag);
 
+	public List<BoardVO> getBoardListSearch(int startIndexNo, int pageSize, String search, String searchString);
+
+	public void imgDelete(String content);
+
+	public int setBoardDelete(int idx);
+
+	public void imgCheckUpdate(String content);
+
+	public int setBoardUpdate(BoardVO vo);
+
 }
